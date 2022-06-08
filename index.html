@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title> JavaScript Palindrome </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <div class="header">
+            <h1>
+                Palindrome Checker
+            </h1>
+        </div>
+        <div class="container">
+            <div class="label">
+                <label for="value">Enter a string or text to check for Palindrome:
+                    <input type="text" name="value" id="inputValue">
+                </label>
+            </div>
+            <div class="inputButton">
+                <input type="submit" value="Submit" onclick="checkPalindrome()">
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        function checkPalindrome() {
+
+            let string = document.getElementById("inputValue").value
+            let array = string.split(' ')   //to identify different words in the palindrome
+
+            array.forEach(element => {
+                if (!element)
+                    return
+                let len = element.length / 2
+                for (let i = 0; i < len; i++) {
+                    if (element[i] !== element[element.length - 1 - i]) {
+                        return
+                    }
+                }
+                alert(`"In ${string}" '${element}' is a palindrome`)
+                return
+            });
+        }
+    </script>
+</body>
+
+</html>

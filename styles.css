@@ -1,0 +1,17 @@
+.header {
+    text-align: center;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid aqua;
+    padding: 3%;
+}
+
+.label{
+    margin-bottom: 3%;
+}
